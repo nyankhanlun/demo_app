@@ -1,0 +1,236 @@
+// General Styles
+.cover-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+    img {
+        max-width: 100%; // Ensures images are responsive
+        height: auto;
+    }
+}
+
+.bg{
+    background-color: black !important;
+}
+.clickBible {
+    position: absolute;
+    top: 17%;
+    left: 43.5%;
+}
+
+.mt {
+    margin-top: 70px;
+}
+
+.text-center {
+    h1 {
+        font-size: 40px;
+        background: -webkit-linear-gradient(#fc634f, #f2852c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .f-14 {
+        font-size: 0.9rem;
+    }
+}
+
+.transparent-box {
+    position: absolute;
+    // top: 48%;
+    top: 46%;
+    left: 33.5%;
+    width: 33%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+// Footer
+footer {
+    font-family: Rubik;
+    background-color: #595653;
+}
+
+// Responsive Design
+
+// @media (max-width: 1024px) {
+//     .clickBible {
+//         width: 200px !important;
+//         top: 17% !important;
+//         left: 43.5% !important;
+//     }
+// }
+
+
+/* Medium screens (tablets) */
+@media (min-width: 712px) and (max-width: 819px) {
+    .cover-container {
+        padding: 0.5rem;
+
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+
+        .transparent-box {
+            top: 28%;
+            left: 10%;
+            width: 80%;
+        }
+
+        .clickBible {
+            width: 150px;
+            top: 22%;
+            left: 40.5%;
+        }
+
+        img {
+            height: auto;
+        }
+    }
+
+    footer {
+        font-size: 0.65rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .transparent-box {
+        top: 28%;
+        left: 10%;
+        width: 80%;
+    }
+    .clickBible {
+        width: 150px;
+        top: 24% !important;
+        left: 41.5% !important;
+    }
+}
+
+/* Large screens */
+@media (min-width: 820px) {
+    .clickBible {
+        width: 150px !important;
+        top: 21% !important;
+        left: 42% !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .transparent-box {
+        top: 50%;
+        left: 25%;
+        width: 50%;
+    }
+    .clickBible {
+        top: 35% !important;
+        left: 45.5% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .cover-container {
+        .transparent-box {
+            p {
+                font-size: 0.8rem;
+            }
+            top: 28%;
+            left: 3%;
+            width: 94%;
+            margin-top: 33px;
+        }
+
+        .clickBible {
+            width: 110px !important;
+            top: 25% !important;
+            left: 38% !important;
+        }
+    }
+    
+}
+
+@media (max-width: 400px) {
+
+    .cover-container {
+        padding: 0.25rem;
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .transparent-box {
+            p {
+                font-size: 0.8rem;
+            }
+            top: 28%;
+            left: 3%;
+            width: 94%;
+            margin-top: 33px;
+        }
+
+        .mt{
+            margin-top:100px
+        }
+        .clickBible {
+            width: 100px !important;
+            top: 28% !important;
+            left: 38% !important;
+        }
+    }
+
+    footer {
+        font-size: 0.6rem;
+        padding: 0.25rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .cover-container {
+        padding: 0.25rem;
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .transparent-box {
+            p {
+                font-size: 0.8rem;
+            }
+
+            top: 36%;
+            left: 3%;
+            width: 94%;
+            margin-top: 0px;
+        }
+
+        .mt{
+            margin-top: 150px;
+        }
+        .clickBible {
+            width: 85px !important;
+            top: 31% !important;
+            left: 39% !important;
+        }
+    }
+
+    footer {
+        font-size: 0.6rem;
+        padding: 0.25rem;
+    }
+}

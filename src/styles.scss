@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+ * Base structure
+ */
+
+body {
+  font-family: Rubik;
+  background-color: black !important;
+}
+
+.cover-container {
+  max-width: 42em;
+  font-family: Rubik;
+}
+
+//media query
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 600px), (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}

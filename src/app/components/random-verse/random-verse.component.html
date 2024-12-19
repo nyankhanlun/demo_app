@@ -1,0 +1,13 @@
+<div *ngIf="currentVerse">
+    <div class="verse-container">
+        <div class="ministry-name">Hallelujah International Ministry</div>
+        <div class="year">2025</div>
+        <div class="verse-reference"><p>"{{ currentVerse.verse }}"</p></div>
+        <div class="verse-text">
+            <p><em>- {{ currentVerse.reference }}</em></p>
+        </div>
+    </div>
+</div>
+<button (click)="getNewVerse()">The scripture of the Year</button>
+<button (click)="resetVerses()">Reset</button>
+<p *ngIf="allUsed">All verses shown. Click reset to start over.</p>
