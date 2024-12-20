@@ -1,236 +1,183 @@
-// General Styles
+/* General styling */
 .cover-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 1rem;
-
-    img {
-        max-width: 100%; // Ensures images are responsive
-        height: auto;
-    }
+    width: 90%; // Adjust width for responsiveness
+    margin: auto;
 }
 
-.bg{
+img {
+    max-width: 100%;
+    height: auto; // Ensures images scale correctly
+}
+
+.newyear2025 {
+    max-width: 100%;
+    height: auto;
+}
+
+.background-black {
     background-color: black !important;
 }
+
 .clickBible {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.clickBible:hover {
+    transform: scale(1.1);
+
+}
+
+/* Overlay container styling */
+.overlay-container {
+    position: relative;
+    width: fit-content; // Ensure it adjusts to the content size
+    margin: auto;
+}
+
+.bg-image {
+    display: block;
+    width: 100%;
+    height: auto; // Adjust image size responsively
+}
+
+.overlay-text {
     position: absolute;
-    top: 17%;
-    left: 43.5%;
-}
-
-.mt {
-    margin-top: 70px;
-}
-
-.text-center {
-    h1 {
-        font-size: 40px;
-        background: -webkit-linear-gradient(#fc634f, #f2852c);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .f-14 {
-        font-size: 0.9rem;
-    }
-}
-
-.transparent-box {
-    position: absolute;
-    // top: 48%;
-    top: 46%;
-    left: 33.5%;
-    width: 33%;
+    top: 25%; // Center vertically
+    left: 50%; // Center horizontally
+    transform: translate(-50%, -50%); // Adjust positioning for exact centering
+    width: 100%;
     padding: 20px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1.2rem;
     line-height: 1.5;
 }
 
-// Footer
-footer {
+.verse-text {
+    font-size: 1rem;
+    font-weight: 500;
     font-family: Rubik;
-    background-color: #595653;
 }
 
-// Responsive Design
+.reference-text {
+    font-size: 0.9rem;
+    font-family: Rubik;
+    font-weight: 500;
+    text-shadow: 0 0 10px black,  
+             0 0 20px black,   
+             0 0 30px #FFD700, 
+             0 0 40px #FFA500, 
+             0 0 50px #FF6347;
+}
 
-// @media (max-width: 1024px) {
-//     .clickBible {
-//         width: 200px !important;
-//         top: 17% !important;
-//         left: 43.5% !important;
-//     }
-// }
+/* Responsive styling for overlay-text */
+@media (max-width: 1024px) {
+    .overlay-text {
+        top: 20%; // Adjust positioning for medium screens
+        font-size: 0.9rem;
+    }
 
+    .verse-text {
+        font-size: 0.9rem;
+    }
 
-/* Medium screens (tablets) */
-@media (min-width: 712px) and (max-width: 819px) {
+    .reference-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        top: 18%; // Adjust positioning for smaller screens
+        font-size: 0.8rem;
+    }
+
+    .verse-text {
+        font-size: 0.8rem;
+    }
+
+    .reference-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        top: 35%; // Adjust positioning for extra small screens
+        font-size: 0.8rem;
+    }
+
+    .verse-text {
+        font-size: 0.8rem;
+    }
+
+    .reference-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #595653;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    font-family: Rubik;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .cover-container {
+        padding: 1.5rem;
+    }
+
+    .newyear2025 {
+        width: 80%;
+        height: auto;
+    }
+
+    .clickBible {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-container {
+        padding: 1rem;
+    }
+
+    .newyear2025 {
+        width: 70%;
+        height: auto;
+    }
+
+    .clickBible {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
     .cover-container {
         padding: 0.5rem;
+    }
 
-        h1 {
-            font-size: 1.8rem;
-            line-height: 2.2rem;
-        }
+    .newyear2025 {
+        width: 60%;
+        height: auto;
+    }
 
-        .transparent-box {
-            top: 28%;
-            left: 10%;
-            width: 80%;
-        }
-
-        .clickBible {
-            width: 150px;
-            top: 22%;
-            left: 40.5%;
-        }
-
-        img {
-            height: auto;
-        }
+    .clickBible {
+        width: 100px;
     }
 
     footer {
-        font-size: 0.65rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .transparent-box {
-        top: 28%;
-        left: 10%;
-        width: 80%;
-    }
-    .clickBible {
-        width: 150px;
-        top: 24% !important;
-        left: 41.5% !important;
-    }
-}
-
-/* Large screens */
-@media (min-width: 820px) {
-    .clickBible {
-        width: 150px !important;
-        top: 21% !important;
-        left: 42% !important;
-    }
-}
-
-@media (min-width: 1025px) {
-    .transparent-box {
-        top: 50%;
-        left: 25%;
-        width: 50%;
-    }
-    .clickBible {
-        top: 35% !important;
-        left: 45.5% !important;
-    }
-}
-
-@media (max-width: 500px) {
-    .cover-container {
-        .transparent-box {
-            p {
-                font-size: 0.8rem;
-            }
-            top: 28%;
-            left: 3%;
-            width: 94%;
-            margin-top: 33px;
-        }
-
-        .clickBible {
-            width: 110px !important;
-            top: 25% !important;
-            left: 38% !important;
-        }
-    }
-    
-}
-
-@media (max-width: 400px) {
-
-    .cover-container {
-        padding: 0.25rem;
-
-        h1 {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-
-        .transparent-box {
-            p {
-                font-size: 0.8rem;
-            }
-            top: 28%;
-            left: 3%;
-            width: 94%;
-            margin-top: 33px;
-        }
-
-        .mt{
-            margin-top:100px
-        }
-        .clickBible {
-            width: 100px !important;
-            top: 28% !important;
-            left: 38% !important;
-        }
-    }
-
-    footer {
-        font-size: 0.6rem;
-        padding: 0.25rem;
-    }
-}
-
-@media (max-width: 320px) {
-
-    .cover-container {
-        padding: 0.25rem;
-
-        h1 {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-
-        .transparent-box {
-            p {
-                font-size: 0.8rem;
-            }
-
-            top: 36%;
-            left: 3%;
-            width: 94%;
-            margin-top: 0px;
-        }
-
-        .mt{
-            margin-top: 150px;
-        }
-        .clickBible {
-            width: 85px !important;
-            top: 31% !important;
-            left: 39% !important;
-        }
-    }
-
-    footer {
-        font-size: 0.6rem;
-        padding: 0.25rem;
+        font-size: 0.8rem;
     }
 }

@@ -1,20 +1,24 @@
 <div class="text-center mb-2">
     <div class="cover-container d-flex w-100 h-100 p-1 mx-auto flex-column">
-        <div class="align-center mt-3">
-            <div #screen class="bg p-1">
-                <div>
-                    <img src="../../../assets/images/Logo.png" width="110px" height="80px" class="mb-4">
-                    <h1>New Year <br> Bible Verse 2025</h1>
-                    <div class="mb-2 mt-3">
-                        <div *ngIf="showClickMe">
-                            <img (click)="generateBible()" class="mt-5 clickBible"
+        <div class="align-center">
+            <div #screen class="p-1">
+                <div class="background-black">
+                    <div><img src="../../../assets/images/Logo.png" width="110px" height="80px"
+                            class="mt-3 mb-4"></div>
+                    <div> <img src="../../../assets/images/NYBV.jpg" class="newyear2025"></div>
+                    <div>
+                        <div *ngIf="showClickMe" class="mt-4">
+                            <img (click)="generateBible()" class="clickBible"
                                 src="../../../assets/images/Gen-button.png" width="150px">
                         </div>
-                        <div *ngIf="!showClickMe" class="transparent-box">
-                            <p class="f-14">{{ currentVerse?.verse }}</p>
-                            <p class="fw-bolder">{{ currentVerse?.reference }}</p>
+                        <div class="overlay-container mt-2">
+                            <img class="bg-image" src="../../../assets/images/BG.png" height="300px">
+                            <div *ngIf="!showClickMe" class="overlay-text">
+                                <p class="verse-text text-break">{{ currentVerse?.verse }}</p>
+                                <p class="reference-text">{{ currentVerse?.reference }}</p>
+                            </div>
                         </div>
-                        <img class="mt" src="../../../assets/images/BG.png" height="300px">
+
                     </div>
                 </div>
             </div>
@@ -24,13 +28,11 @@
                 <div class="mt-5">
                     <img (click)="shareOnX()" class="me-4" src="../../../assets/images/twitter.png">
                     <img (click)="shareOnFacebook()" class="me-4" src="../../../assets/images/FB.png">
-                    <!-- <img class="me-4" src="../../../assets/images/IG.png"> -->
                     <img (click)="copyLink()" src="../../../assets/images/TT.png">
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 <footer class="fixed-bottom text-white text-center py-1 f-12">
     <span>@2025 HIC. All Rights Reserved</span>
