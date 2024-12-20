@@ -20,7 +20,7 @@ export class BibleService {
   }
 
   private loadVerses() {
-    this.http.get<BibleVerse[]>('./bible-verses.json').subscribe(data => {
+    this.http.get<BibleVerse[]>('./assets/bible-verses.json').subscribe(data => {
       this.verses = data;
     });
   }
